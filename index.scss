@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+$body-color: rgb(24, 24, 24);
+$text-color-one: white;
+$text-color-two: rgb(144, 144, 144);
+$text-color-blue: rgb(39, 152, 255);
+
+.video {
+  height: 25vh;
+  background-color: orange;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FnjnESj6xgObv2%2Fgiphy-downsized-large.gif&f=1&nofb=1");
+  background-position: center;
+  background-size: cover;
+}
+
+.main {
+  height: 75vh;
+  background-color: $body-color;
+  overflow-y: scroll;
+}
+
+.mainInfo {
+  height: 15vh;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.089);
+
+  .mainInfo__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50%;
+    padding: 15px;
+
+    .tags {
+      display: flex;
+      font-size: 10px;
+      color: $text-color-blue;
+      margin-bottom: 5px;
+      margin-top: 5px;
+
+      p {
+        margin-right: 3px;
+      }
+    }
+
+    .videoTitle {
+      color: $text-color-one;
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .timestamp {
+      font-size: 10px;
+      color: $text-color-two;
+    }
+  }
+
+  .mainInfo__bottom {
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $text-color-two;
+    padding: 0 30px;
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      p {
+        margin-top: 2px;
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+.channelInfo {
+  display: flex;
+  height: 5vh;
+  padding: 15px;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.089);
+
+  .channelInfo__left {
+    display: flex;
+    align-items: center;
+    flex: 0.75;
+
+    .l {
+      display: flex;
+
+      img {
+        width: 25px;
+        height: 25px;
+        border-radius: 20px;
+      }
+    }
+
+    .r {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+
+      p {
+        font-size: 9px;
+      }
+
+      .sub-number {
+        color: $text-color-two;
+      }
+    }
+  }
+
+  .channelInfo__right {
+    flex: 0.25;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $text-color-two;
+
+    .sub {
+      font-size: 10px;
+    }
+  }
+}
+
+.comments {
+  height: 10vh;
+
+  .commentsTop {
+    display: flex;
+    padding: 0 15px;
+    align-items: center;
+
+    height: 50%;
+
+    img {
+      width: 20px;
+      height: 20px;
+      border-radius: 20px;
+    }
+
+    form {
+      width: 93%;
+    }
+    input {
+      margin-left: 5px;
+      outline: none;
+      border: none;
+      width: 100%;
+      border-radius: 2px;
+      height: 25px;
+      padding-left: 5px;
+      background-color: rgba(255, 255, 255, 0.123);
+      font-size: 9px;
+      color: white;
+    }
+  }
+
+  .commentsBottom {
+    display: flex;
+    padding: 0 15px;
+    align-items: center;
+    height: 50%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.089);
+
+    img {
+      width: 20px;
+      height: 20px;
+      border-radius: 20px;
+    }
+
+    p {
+      font-size: 9px;
+      color: white;
+      margin-left: 5px;
+    }
+
+    .viewComments {
+      margin-left: 90px;
+      color: $text-color-blue;
+    }
+  }
+}
+
+.otherVideos {
+  padding: 0 15px;
+
+  .video {
+    width: 100%;
+    height: 180px;
+    margin-top: 10px;
+  }
+}
+
+.overlay {
+  display: none;
+  flex-direction: column;
+  background-color: $body-color;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  position: fixed;
+  z-index: 2;
+  animation: fade-in-up 500ms ease-in-out;
+
+  .overlayTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5vh;
+    width: 100vw;
+    padding: 0 15px;
+    color: $text-color-two;
+    background-color: rgb(32, 32, 32);
+
+    .oll {
+      flex: 0.85;
+      display: flex;
+
+      p {
+        font-size: 12px;
+        margin-right: 5px;
+      }
+    }
+
+    .olr {
+      display: flex;
+      justify-content: space-between;
+      flex: 0.15;
+
+      .fa {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.userComment {
+  display: flex;
+  color: rgb(241, 241, 241);
+  padding: 10px 15px 10px 15px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.089);
+  .userComment__left {
+    margin-right: 10px;
+    img {
+      width: 30px;
+      border-radius: 30px;
+    }
+  }
+  .userComment__right {
+    .comment-user {
+      color: $text-color-two;
+      font-size: 10px;
+      margin-bottom: 5px;
+    }
+    .comment-message {
+      font-size: 12px;
+    }
+  }
+}
+
+.show {
+  display: flex;
+}
+
+@keyframes fade-in-up {
+  from {
+    transform: translateY(70vh);
+  }
+  to {
+  }
+}
