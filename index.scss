@@ -35,7 +35,7 @@ $text-color-blue: rgb(39, 152, 255);
     height: 50%;
     padding: 15px;
 
-    .tags {
+    .mainInfo__tags {
       display: flex;
       font-size: 10px;
       color: $text-color-blue;
@@ -47,13 +47,13 @@ $text-color-blue: rgb(39, 152, 255);
       }
     }
 
-    .videoTitle {
+    .mainInfo__videoTitle {
       color: $text-color-one;
       font-size: 12px;
       margin-bottom: 5px;
     }
 
-    .timestamp {
+    .mainInfo__timestamp {
       font-size: 10px;
       color: $text-color-two;
     }
@@ -115,7 +115,7 @@ $text-color-blue: rgb(39, 152, 255);
     align-items: center;
     flex: 0.75;
 
-    .l {
+    .channelInfo__img {
       display: flex;
 
       img {
@@ -125,7 +125,7 @@ $text-color-blue: rgb(39, 152, 255);
       }
     }
 
-    .r {
+    .channelInfo__right {
       display: flex;
       flex-direction: column;
       margin-left: 10px;
@@ -134,13 +134,13 @@ $text-color-blue: rgb(39, 152, 255);
         font-size: 9px;
       }
 
-      .sub-number {
+      .channelInfo__subscribers {
         color: $text-color-two;
       }
     }
   }
 
-  .channelInfo__right {
+  .channelInfo__subscribe {
     flex: 0.25;
     display: flex;
     align-items: center;
@@ -244,7 +244,7 @@ $text-color-blue: rgb(39, 152, 255);
     color: $text-color-two;
     background-color: rgb(32, 32, 32);
 
-    .oll {
+    .overlayTop__left {
       flex: 0.85;
       display: flex;
 
@@ -254,7 +254,7 @@ $text-color-blue: rgb(39, 152, 255);
       }
     }
 
-    .olr {
+    .overlayTop__right {
       display: flex;
       justify-content: space-between;
       flex: 0.15;
@@ -280,18 +280,18 @@ $text-color-blue: rgb(39, 152, 255);
     }
   }
   .userComment__right {
-    .comment-user {
+    .userComment__title {
       color: $text-color-two;
       font-size: 10px;
       margin-bottom: 5px;
     }
-    .comment-message {
+    .userComment__message {
       font-size: 12px;
     }
   }
 }
 
-.suggested-video {
+.suggestedVideo {
   margin-top: 10px;
   margin-bottom: 10px;
 
@@ -301,39 +301,35 @@ $text-color-blue: rgb(39, 152, 255);
     margin: 0;
   }
 
-  .suggested-video-bottom {
+  .suggestedVideo__bottom {
     padding: 2px;
     color: white;
     display: flex;
     font-size: 12px;
   }
 
-  .svb-l {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .suggestedVideo__img {
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 30px;
+    }
   }
 
-  .svb-r {
+  .suggestedVideo__info {
     margin-left: 5px;
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
 
-  .svb-r-info {
+  .suggestedVideo__desc {
     opacity: 0.6;
     font-size: 10px;
   }
 }
 
-.svb-l {
-  img {
-    width: 30px;
-    height: 30px;
-    border-radius: 30px;
-  }
-}
+// js
 
 .show {
   display: flex;

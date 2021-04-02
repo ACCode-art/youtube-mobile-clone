@@ -9,7 +9,7 @@ const dislikes = document.querySelector(".dislikes");
 const iconLike = document.querySelector(".icon-like");
 const iconDislikes = document.querySelector(".icon-dislikes");
 const sub = document.querySelector(".sub");
-const channelInfoRight = document.querySelector(".channelInfo__right");
+const channelInfoSubscribe = document.querySelector(".channelInfo__subscribe");
 
 let lcount = 132;
 let dcount = 12;
@@ -108,7 +108,7 @@ exit.addEventListener("click", () => {
 
 let subscribed = false;
 
-channelInfoRight.addEventListener("click", () => {
+channelInfoSubscribe.addEventListener("click", () => {
   subscribed = !subscribed;
   sub.classList.toggle("greyscale");
   console.log(subscribed);
@@ -117,21 +117,21 @@ channelInfoRight.addEventListener("click", () => {
 suggestedVideosArray.map((element) => {
   const { title, desc, img } = element;
 
-  const HTML = `<div class="suggested-video">
+  const HTML = `<div class="suggestedVideo">
   <img
     src=${img}
     alt=""
   />
-  <div class="suggested-video-bottom">
-    <div class="svb-l">
+  <div class="suggestedVideo__bottom">
+    <div class="suggestedVideo__img">
       <img
         src=${img}
         alt=""
       />
     </div>
-    <div class="svb-r">
+    <div class="suggestedVideo__info">
       <p>${title}</p>
-      <p class="svb-r-info">${desc}</p>
+      <p class="suggestedVideo__desc">${desc}</p>
     </div>
   </div>
 </div>`;
