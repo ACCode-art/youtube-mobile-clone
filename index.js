@@ -10,6 +10,7 @@ const iconLike = document.querySelector(".icon-like");
 const iconDislikes = document.querySelector(".icon-dislikes");
 const sub = document.querySelector(".sub");
 const channelInfoSubscribe = document.querySelector(".channelInfo__subscribe");
+const bellIconShow = document.querySelector(".icon--show");
 
 let lcount = 132;
 let dcount = 12;
@@ -111,7 +112,7 @@ let subscribed = false;
 channelInfoSubscribe.addEventListener("click", () => {
   subscribed = !subscribed;
   sub.classList.toggle("greyscale");
-  console.log(subscribed);
+  bellIconShow.classList.toggle("show");
 });
 
 suggestedVideosArray.map((element) => {

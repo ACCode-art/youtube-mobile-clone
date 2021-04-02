@@ -151,6 +151,11 @@ $text-color-blue: rgb(39, 152, 255);
       font-size: 10px;
       color: rgb(241, 64, 64);
     }
+
+    .icon--show {
+      margin-left: 10px;
+      display: none;
+    }
   }
 }
 
@@ -332,7 +337,7 @@ $text-color-blue: rgb(39, 152, 255);
 // js
 
 .show {
-  display: flex;
+  display: flex !important;
 }
 
 .whiteLiked {

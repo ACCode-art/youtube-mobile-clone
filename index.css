@@ -217,6 +217,11 @@
   color: #f14040;
 }
 
+.channelInfo .channelInfo__subscribe .icon--show {
+  margin-left: 10px;
+  display: none;
+}
+
 .comments {
   height: 10vh;
 }
@@ -431,9 +436,9 @@
 }
 
 .show {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 .whiteLiked {
